@@ -13,7 +13,7 @@ function kalman(li,i,m,lmean,nmax){
         m[i]=li;
         return lmean
     }else{
-        lmean = (lmean * (nmax-1) + li-m[0])/nmax;
+        lmean = (lmean  +( li-m[0])/nmax);
         for (var j = 0; j<=nmax-2;j++){
             m[j] = m[j+1];
         }
